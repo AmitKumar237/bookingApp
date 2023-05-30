@@ -10,7 +10,7 @@ export default function Register() {
                     <input type="password" placeholder="password" />
                     <button className="primary">Register</button>
                     <div className='text-gray-500 text-center py-2'>
-                        Already have an account? <Link to={'/register'} className='underline text-black'>Login now</Link>
+                        Already have an account? <Link to={'/login'} className='underline text-black'>Login now</Link>
                     </div>
                 </form>
             </div>
