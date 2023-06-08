@@ -8,7 +8,7 @@ const CokkieParser = require('cookie-parser');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 const app = express();
-const PORT = 4000;
+const PORT = 7000;
 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'sdfghjuytdcvjytrdtyhbiuytegvbjiuytdty';
@@ -64,6 +64,10 @@ app.post('/login' , async (req , res) =>{
         res.json("User Not found!");
     }
 });
+
+app.post('/logout' , async(req , res) => {
+    res.cookie('token' , '').json(true);
+})
 
 // Getting a profile of a single person
 app.get('/profile' ,  (req , res) =>{
